@@ -4,7 +4,7 @@ import Menu from "./Menu";
 
 export default function Header () {
     return (
-        <div className="flex flex-row justify-between items-center bg-mm-blue min-w-80">
+        <div className="flex flex-row justify-between items-center bg-mm-blue min-w-80 w-full">
         <Logo />
         <Menu />
       </div>
