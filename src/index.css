@@ -1,3 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+body{
+    background-color: rgba(235, 217, 200, 0.2); /* Same color (#ebd9c8) but lighter */
+}
