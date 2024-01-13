@@ -7,7 +7,7 @@ export default function RecordArticle ({record}) {
   return(
     <article className={`flex flex-col sm:flex-row justify-center items-center ${backgroundColor} rounded shadow shadow-mm text-mm w-11/12 mt-1 mb-2`}>
       <div className="flex flex-col sm:flex-row justify-between items-center p-2 w-full">
-        <h2 className="font-bold sm:w-1/4">{record.name}</h2>
+        <h2 className="font-bold sm:w-1/2">{record.name}</h2>
         <p>${record.amount}</p>
         <p>{record.date}</p>
       </div>
