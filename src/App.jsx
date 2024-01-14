@@ -26,10 +26,15 @@ function App() {
     setRecords(newRecords)
   }
 
+  const deleteRecord = (id) => {
+    const newRecords = records.filter((r) => r.id !== id)
+    setRecords(newRecords)
+  }
+
   return (
     <div className="flex flex-col w-full items-center">
       <Header />
-      <Body records={records} addRecord={addRecord} />
+      <Body records={records} addRecord={addRecord} editRecord={editRecord} deleteRecord={deleteRecord} />
     </div>
   )
 }
