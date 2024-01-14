@@ -1,9 +1,12 @@
 import RecordFormItem from "./RecordFormItem";
 import { useState } from "react";
+import PropTypes from 'prop-types'
 
 
-export default function RecordForm() {
+export default function RecordForm({addRecord}) {
   const [record, setRecord] = useState({
+    id : Date.now(),
+    isIncome: "false",
     name: "",
     amount: 0,
     category: "",
@@ -19,7 +22,12 @@ export default function RecordForm() {
   }
   const hadleFormSubmit = (event) => {
     event.preventDefault();
+    setRecord((prevRecord) => ({
+      ...prevRecord,
+      id: Date.now()
+    }))
     console.log(record);
+    addRecord(record);
   }
   return (
     <form name="recordForm" className="flex flex-col justify-center items-center w-80 sm:w-10/12">
@@ -38,4 +46,8 @@ export default function RecordForm() {
       <button type="submit" className="p-2 m-2 bg-mm-blue text-mm-yellow rounded shadow shadow-mm hover:bg-mm-teal hover:text-mm-sand" onClick={hadleFormSubmit}>Añadir registro</button>
     </form>
   )
+}
+
+RecordForm.propTypes = {
+  addRecord: PropTypes.func,
 }
