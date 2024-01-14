@@ -16,6 +16,10 @@ function App() {
     setRecords([...records, record])
   }
 
+  const recordsByDate = (records) => {
+    return records.sort((a, b) => new Date(b.date) - new Date(a.date))
+  }
+
   const editRecord = (record) => {
     const newRecords = records.map((r) => {
       if (r.id === record.id) {
@@ -34,7 +38,7 @@ function App() {
   return (
     <div className="flex flex-col w-full items-center">
       <Header />
-      <Body records={records} addRecord={addRecord} editRecord={editRecord} deleteRecord={deleteRecord} />
+      <Body records={recordsByDate(records)} addRecord={addRecord} editRecord={editRecord} deleteRecord={deleteRecord} />
     </div>
   )
 }
