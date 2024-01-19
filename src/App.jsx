@@ -36,7 +36,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col w-full items-center">
+    <div className="flex flex-col w-full items-center bg-mm-sand/30 min-h-screen">
       <Header />
       <Body records={recordsByDate(records)} addRecord={addRecord} editRecord={editRecord} deleteRecord={deleteRecord} />
     </div>
