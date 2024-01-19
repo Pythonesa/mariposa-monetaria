@@ -34,7 +34,7 @@ export default function RecordForm({addRecord}) {
       <RecordFormItem labelText={"Nombre:"} inputName={"name"} inputPlaceHolder={"Ej. Compra supermercado"} onChange={handleInputChange} inputValue={record.name}/>
       <div className="flex flex-col p-2 w-11/12 sm:flex-row">
         <label htmlFor="isIncome" className="text-mm p-1 text-left mr-2 sm:w-1/3 sm:text-right">Tipo</label>
-        <select name="isIncome" className="text-mm p-1 w-full rounded placeholder-gray-300 bg-white/80" onChange={handleInputChange}>
+        <select name="isIncome" className="text-mm p-1 w-full rounded placeholder-gray-300 bg-white/80 focus:outline-none" onChange={handleInputChange}>
           <option value="false">Gasto</option>
           <option value="true">Ingreso</option>
         </select>
