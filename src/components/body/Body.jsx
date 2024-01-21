@@ -1,12 +1,11 @@
-import EditModal from "./EditModal"
+
 import RecordArticle from "./recordForm/RecordArticle";
 import RecordForm from "./recordForm/RecordForm";
 import PropTypes from 'prop-types'
-import { useState } from "react";
 
 export default function Body({records, addRecord, editRecord, deleteRecord}) {
 
-  const [showModal, setShowModal] = useState(false);
+  
 
   return(
 
@@ -19,11 +18,11 @@ export default function Body({records, addRecord, editRecord, deleteRecord}) {
         <h2 className="text-mm p-2 font-bold text-mm-teal">Registros recientes</h2>
         <div className="flex flex-col justify-center items-center w-80 sm:w-10/12 px-2">
           {records.map((record) => (
-            <RecordArticle key={record.id} record={record} editRecord={editRecord} deleteRecord={deleteRecord} setShowModal={setShowModal}/>
+            <RecordArticle key={record.id} record={record} editRecord={editRecord} deleteRecord={deleteRecord}/>
           ))}
         </div>
       </div>
-      {showModal && <EditModal editRecord={editRecord} toEditRecord={records[0]}/>}
+      
     </div>
 
     
