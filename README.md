@@ -19,3 +19,10 @@ Aplicación para llevar un registro detallado de ingresos y gastos del hogar.
 - Vite
 - TailwindCSS
 
+## Deploy
+
+La App se encuentra con un deploy automático a partir de github en Netlify.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/94bfffdc-8d0a-4078-8e32-03a2488f5b8c/deploy-status)](https://app.netlify.com/sites/mariposamonetaria/deploys)
+
+[Link a la app deployada](https://mariposamonetaria.netlify.app/)
